@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtPrintSupport import *
+from PyQt5 import QtGui
 import os
 import sys
 
@@ -18,6 +19,8 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.browser)
         self.status = QStatusBar()
         self.setStatusBar(self.status)
+        
+        self.setWindowIcon(QtGui.QIcon('logo.png'))
 
         navtb = QToolBar("Navigation")
         self.addToolBar(navtb)
